@@ -47,13 +47,16 @@ function shortURL() {
   var longURL = getURL();
   generateHash();
   sendRequest(longURL);
+  document.getElementById("shorten-URL").value = window.location.href;
 }
 
-var hash = window.location.hash.substr(1);
-if (window.location.hash !== "") {
-  $.getJSON(`${endpoint}/${hash}`, function(data) {
+var hashh = window.location.hash.substr(1);
+
+if (window.location.hash != "") {
+  $.getJSON(endpoint + "/" + hashh, function(data) {
     data = data["result"];
-    if (data !== null) {
+
+    if (data != null) {
       window.location.href = data;
     }
   });

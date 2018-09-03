@@ -7,21 +7,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>URL Shortener</title>
     <style>
-        .text{
-            font-weight: 900
+        #url-input{
+            display: block;
+        }
+        button{
+            display: block;
+            margin: 12px;
+            padding: 5px;
+            color: #0099CC; 
+            background: transparent;
+            border: 2px solid #0099CC;
+            border-radius: 6px;
+            font-size: 16px;
+            color: black;
+            background-color: white; 
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        button:hover {
+            background: #008CBA;
+            color: white;
+        }
+        #shorten-URL{
+            display: block;
         }
     </style>
 </head>
 
 <body>
     <label for="url-input">
-        Please input your URL
+        Please input your URL:
     </label>
-    <input type="url" id="url-input" placeholder="eg. https://....">
+    <input type="url" id="url-input" size="100" placeholder="https://....">
     <button onclick="shortURL()">
         Shorten this URL!
     </button>
-    <p class="text">Your shorten URL will be the one in the address bar!</p>
+    <label for="shorten-URL">
+        Your shortened URL:
+    </label>
+    <input type="text" id="shorten-URL" size="100" value="" placeholder="waiting...">
 
 
 
