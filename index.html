@@ -9,10 +9,11 @@
     <style>
         #url-input{
             display: block;
+            margin-top: 5px;
         }
         button{
             display: block;
-            margin: 12px;
+            margin: 15px;
             padding: 5px;
             color: #0099CC; 
             background: transparent;
@@ -32,19 +33,20 @@
         }
         #shorten-URL{
             display: block;
+            margin-top: 5px;
         }
     </style>
 </head>
 
 <body>
-    <label for="url-input">
+    <label style="font-weight:900" for="url-input">
         Please input your URL:
     </label>
     <input type="url" id="url-input" size="100" placeholder="https://....">
     <button onclick="shortURL()">
         Shorten this URL!
     </button>
-    <label for="shorten-URL">
+    <label style="font-weight:900" for="shorten-URL">
         Your shortened URL:
     </label>
     <input type="text" id="shorten-URL" size="100" value="" placeholder="waiting...">
